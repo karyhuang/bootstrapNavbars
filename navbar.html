@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Navbars</title>
+
+	<!-- Downloaded version CSS -->
+	<!-- <link rel="stylesheet" type="text/css" href="bootstrap.css"> -->
+	<!-- OR <link rel="stylesheet" type="text/css" href="bootstrap.min.css"> -->
+	<!-- CDN version CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
+
+</head>
+
+
+<body>
+	<!-- FASTEST way to make a navbar, no hamburger -->
+
+	<!-- NOTE: IF put container here outside of navbar, the entire navbar will shrink in width and items are still touching the borders, whereas put container inside of navbar will keep navbar as full width and only push the items inward -->
+
+	<nav class="navbar navbar-default">
+		<!-- put everything in the navbar in a container to get some padding and margin -->
+		<div class="container">
+
+			<!-- headers -->
+			<div class="navbar-header">
+				<!-- hamburger on collapse -->
+				<!-- data-target must match the id of collapse narbar-collapse -->
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-hamburger-demo" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <!-- each icon-bar represents one line in the hamburger -->
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <!-- logo image/word -->
+	      <a class="navbar-brand" href="#">KOFFEE</a>
+	    </div>
+
+	    <!-- this ul is not within collapse navbar-collapse, so it will not go into hamburger when we go to mobile size -->
+	    <!-- just to demostrate, doesn't really look good -->
+	    <ul class="nav navbar-nav">
+		    <li><a href="#">Services</a></li>
+		    <li><a href="#">Gallery</a></li>
+		  </ul>
+
+	    <!-- collapse navbar-collapse makes contents hide in mobile size, so wrap whatever you'd like to hide on mobile -->
+	    <!-- it only collapses, does not make hamburger -->
+	    <div class="collapse navbar-collapse" id="bs-hamburger-demo">	    
+		    <!-- you need the nav class to create nav bar items -->
+		    <!-- these are floating left -->
+		    <!-- works just fine with div, but using ul makes more sense -->
+		    <ul class="nav navbar-nav">
+		    	<li><a href="#">About</a></li>
+		    	<li><a href="#">Contact</a></li>
+		    </ul>
+
+		    <!-- use navbar-right to include items that float right -->
+		    <ul class="nav navbar-nav navbar-right">
+		    	<li><a href="#">Sign Up</a></li>
+		    	<li><a href="#">Login</a></li>
+		    </ul>
+		  </div>
+
+    </div>
+	</nav>
+
+	<!-- DEFAULT bootstrap navbar, includes hamburger -->
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">Brand</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+	        <li><a href="#">Link</a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="#">Action</a></li>
+	            <li><a href="#">Another action</a></li>
+	            <li><a href="#">Something else here</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#">Separated link</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#">One more separated link</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	      <form class="navbar-form navbar-left">
+	        <div class="form-group">
+	          <input type="text" class="form-control" placeholder="Search">
+	        </div>
+	        <button type="submit" class="btn btn-default">Submit</button>
+	      </form>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#">Link</a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="#">Action</a></li>
+	            <li><a href="#">Another action</a></li>
+	            <li><a href="#">Something else here</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#">Separated link</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+	<!-- to use Bootstrap JS, we need to include jQuery -->
+	<!-- get the newest CDN version jQuery from https://code.jquery.com -->
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+  <!-- jQuery MUST be included before JavaScript otherwise won't work -->
+
+	<!-- Downloaded version JavaScript -->
+	<!-- <link rel="stylesheet" type="text/css" href="bootstrap.js"> -->
+	<!-- OR <link rel="stylesheet" type="text/css" href="bootstrap.min.js"> -->
+	<!-- CDN version JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+</body>
+</html>
